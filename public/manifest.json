@@ -1,0 +1,14 @@
+{
+  "short_name": "Kaoutar",
+  "name": "Kaoutar Studio Portfolio",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#293681",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
