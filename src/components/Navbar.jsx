@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
+import { useTheme } from "../context/ThemeContext";
 
-function Navbar({ darkMode, setDarkMode }) {
-  const [menuOpen, setMenuOpen] = useState(false);
+function Navbar() {
+  const theme = useTheme();
+const { darkMode, toggleTheme } = theme;
+const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
     { name: "Services", href: "#services" },
@@ -47,12 +50,12 @@ function Navbar({ darkMode, setDarkMode }) {
             <div className="flex items-center gap-3">
 
               {/* Dark Mode */}
-              <button
-                onClick={() => setDarkMode(!darkMode)}
-                className="w-11 h-11 rounded-full bg-[#4274D9] text-white flex items-center justify-center hover:rotate-180 duration-500"
-              >
-                {darkMode ? <FaSun /> : <FaMoon />}
-              </button>
+             <button
+  onClick={toggleTheme}
+  className="w-11 h-11 rounded-full bg-[#4274D9] text-white flex items-center justify-center hover:rotate-180 duration-500"
+>
+  {darkMode ? <FaSun /> : <FaMoon />}
+</button>
 
               {/* Mobile Menu */}
               <button
