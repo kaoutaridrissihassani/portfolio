@@ -50,24 +50,9 @@ function App() {
     />
 
     <meta
-      property="og:image"
-      content="/favicon.png"
-    />
-
-    <meta
-      property="og:type"
-      content="website"
-    />
-
-    <meta
-      property="og:url"
-      content="https://kaoutaridrissihassani.github.io"
-    />
-
-    <meta
-      name="twitter:card"
-      content="summary_large_image"
-    />
+    name="twitter:image"
+    content="https://portfolio-five-jade-74.vercel.app/og-image.png"
+  />
   </Helmet>
   <Navbar />
   <Hero />
