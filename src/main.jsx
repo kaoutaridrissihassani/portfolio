@@ -5,7 +5,15 @@ import App from "./App.jsx";
 import "aos/dist/aos.css";
 import { HelmetProvider } from "react-helmet-async";
 
+import ReactGA from "react-ga4";
+
 import { ThemeProvider } from "./context/ThemeContext";
+
+ReactGA.initialize("G-Z60J4844VR");
+ReactGA.send({
+  hitType: "pageview",
+  page: window.location.pathname + window.location.search,
+});
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
